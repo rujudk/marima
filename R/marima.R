@@ -13,7 +13,7 @@
 ##' @param ar.pattern = autoregressive pattern for model (see define.model).
 ##' If ar.pattern is not specified a pure ma-model is estimated.
 ##' @param ma.pattern = moving average pattern for model (see define.model).
-##' If ma.pattern is not specified a pure ma-model is estimated. In this case
+##' If ma.pattern is not specified a pure ar-model is estimated. In this case
 ##' the estimation is carried by regression analysis in a few steps.
 ##' @param max.it = max. number of iterations in estimation (default = 50,
 ##' which often is more than enough).
@@ -446,8 +446,8 @@ grid(col="blue")
 # cat("Iteration shift at :",Iter1," and ",Iter3, "\n")
 mains="log(det(residual covariance matrix))"
 if(Plot=="log.det" & iterate>=3){
-plot(log.det[1:max.iter],main=mains,
-xlab="No. of iterations",ylab="Computed trace",type="l")
+plot(log.det[1:max.iter],main=mains, xlab="No. of iterations",
+     ylab="log(det(residual covariance matrix))",type="l")
 grid(col="blue")}
 
 used.cases<-as.numeric(colnames(residuals))
