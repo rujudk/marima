@@ -264,12 +264,12 @@ return(list(estimates=forecasts,residuals=residuals)) }
 ##'
 ##' @title Function for calculation of variances of nstep forecasts
 ##'
-##' @param marima   =  marima object (cov.u and ar.estimates and
+##' @param marima   =  marima object (resid.cov and ar.estimates and
 ##'                    ma.estimates are used)
 ##' @param nstep    =  length of forecast
 ##'
 ##' @return = pred.var   = variance-covariances for nstep forecasts
-##' @return = rand.shock = corresponding random shock representation 
+##' @return = rand.shock = random shock representation of the marima model
 ##'
 
 forec.var <- function(marima,nstep=1){

@@ -31,7 +31,7 @@
 ##' If Plot="log.det" the log(determinant) of the residual
 ##' covariance matrix (resid.cov) is generated. Default is Plot=FALSE. 
 ##' @param Check=TRUE/FALSE results (if TRUE) in a printout of some controls
-##' of the call to arima. Useful in the first attemp(s) to use marima.
+##' of the call to marima. Useful in the first attemp(s) to use marima.
 ##' Default=FALSE.
 ##' @param penalty = parameter used in the R function 'step' for
 ##' stepwise model reduction. If penalty=2, the conventional
